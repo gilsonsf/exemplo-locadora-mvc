@@ -58,19 +58,36 @@ public class AppLocadora {
 	}
 
 	private void buscaTodos() {
-		System.out.println("buscaTodos()");
+		this.printer = new ColoredPrinter.Builder(1, false)
+                .foreground(FColor.WHITE).background(BColor.CYAN)   //setting format
+                .build();
+		this.printer.println("buscaTodos()");
+		this.printer.clear();
 	}
 
 	private void busca() {
-		System.out.println("busca()");
+		this.printer = new ColoredPrinter.Builder(1, false)
+                .foreground(FColor.WHITE).background(BColor.YELLOW)   //setting format
+                .build();
+		this.printer.println("busca()");
+		this.printer.clear();
 	}
 
 	private void adiciona() {
-		System.out.println("adiciona()");
+		this.printer = new ColoredPrinter.Builder(1, false)
+                .foreground(FColor.WHITE).background(BColor.GREEN)   //setting format
+                .build();
+		this.printer.println("adiciona()");
+		
+		this.printer.clear();
 	}
 
 	public void finaliza() {
-		System.out.println("finaliza()");
+		this.printer = new ColoredPrinter.Builder(1, false)
+                .foreground(FColor.WHITE).background(BColor.RED)   //setting format
+                .build();
+		this.printer.println("finaliza()");
+		this.printer.clear();
 		this.executa = false;
 		this.input.close();
 	}
@@ -82,6 +99,6 @@ public class AppLocadora {
 		//System.out.println("MENU >> Digite 1=adicionar, 2=buscar, 3=buscar todos, 4=deletar, 5=finalizar");
 		printer.println("MENU >> Digite 1=adicionar, 2=buscar, 3=buscar todos, 4=deletar, 5=finalizar");
 		
-		printer.clear(); 
+		this.printer.clear(); 
 	}
 }
